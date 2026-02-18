@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm install
 
 # copy the entire code base
-COPY ..
+COPY . .
 
 # run the build command
 RUN npm run build 
