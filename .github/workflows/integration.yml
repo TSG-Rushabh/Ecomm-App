@@ -26,11 +26,11 @@ jobs:
     steps:
       # get the code from the repo
       - name : Checkout Code
-        uses :   action/checkout@v4           # github action to get in the repos root folder
+        uses : actions/checkout@v4           # github action to get in the repos root folder
 
       # install nodejs
       - name : Setup Node.js
-        uses : action/setup-node@v3           # github action to install nodejs
+        uses : actions/setup-node@v3           # github action to install nodejs
         with:
           node-version : ${{matrix.node-version}} # refernce the node-version set above
           cache :  'npm'         # command to install the node packages
